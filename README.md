@@ -42,7 +42,5 @@ This repository documents how I built and configured a Wazuh-based monitoring en
 - Investigated alerts using the dashboard
 - Practiced basic SOC workflows
 
----
 
-## 📁 Repository Structure (Suggested)
 
