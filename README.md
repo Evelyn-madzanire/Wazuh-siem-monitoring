@@ -17,7 +17,36 @@ This repository documents how I built and configured a Wazuh-based monitoring en
 
 ## 🏗️ Lab Architecture
 
+            ┌────────────────────┐
+            │  Wazuh Dashboard   │
+            └─────────┬──────────┘
+                      │
+            ┌─────────▼──────────┐
+            │   Wazuh Manager    │
+            │   (Ubuntu Server)  │
+            └─────────┬──────────┘
+                      │
+     ┌────────────────┼────────────────┐
+     │                │                │
 
 
 
+
+
+---
+
+## 🔧 Features
+
+### 1. Wazuh Installation
+- Installed Wazuh Manager on Ubuntu Server
+- Set up Wazuh Dashboard for monitoring
+- Verified system services and manager status
+
+```bash
+# Example commands used for installation
+sudo apt update && sudo apt upgrade -y
+curl -sO https://packages.wazuh.com/4.x/install.sh
+sudo bash install.sh
+sudo systemctl enable --now wazuh-manager
+sudo systemctl enable --now wazuh-dashboard
 
